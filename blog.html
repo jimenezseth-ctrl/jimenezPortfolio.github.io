@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Page</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 100px 40px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .blog-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .blog-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .blog-content {
+      padding: 20px;
+    }
+
+    .blog-content h2 {
+      margin: 0 0 10px;
+      color: #222;
+    }
+
+    .blog-content p {
+      color: #555;
+    }
+
+    .read-more {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    .read-more:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    
+    .navbar {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(10px);
+        padding: 12px 35px;
+        border-radius: 50px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    .navbar li {
+        list-style: none;
+        margin: 0 20px;
+        font-weight: 600;
+        color: #333;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .navbar li::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background: #ff5e62;
+        border-radius: 2px;
+        transition: width 0.3s ease;
+    }
+
+    .navbar li:hover::after {
+        width: 100%;
+    }
+
+    .navbar li:hover {
+        color: #ff5e62;
+        transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+
+    <ul class="navbar">
+        <li><a href="introduction.html">Home</a></li>
+        <li><a href="about me.html">About</a></li>
+        <li><a href="Projects.html">Project</a></li>
+        <li><a href="Contacts.html">Contact</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="blog.html">Blog</a></li>
+    </ul>
+
+
+  <header>
+    <h1>My Blog</h1>
+    <p>Stories and Experiences</p>
+  </header>
+
+  <div class="container">
+    <div class="blog-card">
+      <img src="html logo.jpg" class="blog-image" alt="Blog 1">
+      <div class="blog-content">
+        <h2>How I Started Learning Web Development</h2>
+        <p class="short-text">
+          When I first encounter HTML for me its not enjoyable because of how boring it is but...
+        </p>
+        <p class="full-text" style="display:none;">
+          When I first encounter HTML for me its not enjoyable because of how boring it is but then I never imagined how fun it would be when you can design your HTMl using CSS. Over time, I explored JavaScript and found the magic of interactivity. My journey continues as I keep improving every day by practicing and building small projects like this one!
+        </p>
+        <button class="read-more" onclick="toggleText(this)">Read More</button>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <img src="Design.jpg" class="blog-image" alt="Blog 2">
+      <div class="blog-content">
+        <h2>Design Tips for Beginners</h2>
+        <p class="short-text">
+          Good design isn't about what you want but on what the users want because...
+        </p>
+        <p class="full-text" style="display:none;">
+          Good design isn't about what you want but on what the users want because its about balance, spacing, and purpose. If you really want your project to be recognized you need to make it more simple, you can use canva color wheel if you have troubles on making a good background color. Tip for making good design is just do it step by step and don't pressure yourself in the end you can learn from your mistakes.
+          
+        </p>
+        <button class="read-more" onclick="toggleText(this)">Read More</button>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <img src="visual-studio-code-banner-image.jpg" class="blog-image" alt="Blog 3">
+      <div class="blog-content">
+        <h2>My Favorite Tools for Coding</h2>
+        <p class="short-text">
+          Every IT student has their favorite tools in making a website...
+        </p>
+        <p class="full-text" style="display:none;">
+          Every IT student has their favorite tools in making a website, mine is visual studio code because for me it is very easy to use and enjoyable. I love using VS Code for its simplicity and extensions. 
+        </p>
+        <button class="read-more" onclick="toggleText(this)">Read More</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Seth Jimenez | My Portfolio Blog</p>
+  </footer>
+
+  <script>
+    function toggleText(button) {
+      const card = button.parentElement;
+      const shortText = card.querySelector(".short-text");
+      const fullText = card.querySelector(".full-text");
+
+      if (fullText.style.display === "none") {
+        fullText.style.display = "block";
+        shortText.style.display = "none";
+        button.textContent = "Read Less";
+      } else {
+        fullText.style.display = "none";
+        shortText.style.display = "block";
+        button.textContent = "Read More";
+      }
+    }
+  </script>
+</body>
+</html>

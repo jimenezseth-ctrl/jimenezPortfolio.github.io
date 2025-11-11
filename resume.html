@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <style>
+    .navbar {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(10px);
+        padding: 12px 35px;
+        border-radius: 50px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    .navbar li {
+        list-style: none;
+        margin: 0 20px;
+        font-weight: 600;
+        color: #333;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .navbar li::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background: #ff5e62;
+        border-radius: 2px;
+        transition: width 0.3s ease;
+    }
+
+    .navbar li:hover::after {
+        width: 100%;
+    }
+
+    .navbar li:hover {
+        color: #ff5e62;
+        transform: translateY(-3px);
+    }
+
+  body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 40px auto;
+  max-width: 800px;
+  line-height: 1.6;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: #2c3e50;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      border-bottom: 3px solid #ffb84d;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #34495e;
+      border-left: 5px solid #ffb84d;
+      padding-left: 10px;
+      margin-top: 30px;
+    }
+
+    h3 {
+      color: #555;
+      margin-bottom: 5px;
+    }
+
+    p {
+      margin: 3px 0 10px 20px;
+    }
+
+    .profile {
+      background-color: #fff8e1;
+      border-left: 5px solid #ffb84d;
+      padding: 15px;
+      border-radius: 8px;
+      font-style: italic;
+    }
+
+    .education {
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+    <ul class="navbar">
+        <li><a href="introduction.html">Home</a></li>
+        <li><a href="about me.html">About</a></li>
+        <li><a href="Projects.html">Project</a></li>
+        <li><a href="Contacts.html">Contact</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="blog.html">Blog</a></li>
+    </ul>
+
+  <h1>Resume</h1>
+
+  <h2>Personal Profile</h2>
+  <div class="profile">
+    <p>Passionate IT student with a kind heart and a strong eagerness to learn more about technology. 
+      Experienced in HTML, CSS, and JavaScript, with a commitment to creating efficient and user-friendly solutions.
+      Seeking opportunities to collaborate with clients while developing new skills. Proven ability to manage multiple tasks efficiently, meet deadlines, and deliver high-quality results.
+    </p>
+  </div>
+
+  <h2>Education</h2>
+  <div class="education">
+    <h3>BS Information Technology (BSIT)</h3>
+    <p><strong>Holy Name University</strong></p>
+    <p>College Student (2025 - Present)</p>
+
+    <h3>Senior High School (STEM)</h3>
+    <p><strong>Holy Name University</strong></p>
+    <p>Graduated 2024</p>
+
+    <h3>Junior High School</h3>
+    <p><strong>Holy Name University</strong></p>
+    <p>Graduated 2022</p>
+
+    <h3>Elementary School</h3>
+    <p><strong>St. Therese School</strong></p>
+    <p>Graduated 2018</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio</title>
+
+  <style>
+    
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: #333;
+    }
+
+    
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 2.8em;
+      color: #444;
+      letter-spacing: 1px;
+    }
+
+    
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    
+    .project-card {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    
+    .project-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .project-info h3 {
+      margin: 0;
+      font-size: 1.4em;
+      color: #222;
+    }
+
+    .project-info p {
+      font-size: 0.95em;
+      color: #666;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    
+    .project-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff944d;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .project-link:hover {
+      background-color: #ff751a;
+    }
+
+    
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+    }
+
+        .navbar {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(10px);
+        padding: 12px 35px;
+        border-radius: 50px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    .navbar li {
+        list-style: none;
+        margin: 0 20px;
+        font-weight: 600;
+        color: #333;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .navbar li::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background: #ff5e62;
+        border-radius: 2px;
+        transition: width 0.3s ease;
+    }
+
+    .navbar li:hover::after {
+        width: 100%;
+    }
+
+    .navbar li:hover {
+        color: #ff5e62;
+        transform: translateY(-3px);
+    }
+  </style>
+</head>
+
+<body>
+    <ul class="navbar">
+        <li><a href="introduction.html">Home</a></li>
+        <li><a href="about me.html">About</a></li>
+        <li><a href="Projects.html">Project</a></li>
+        <li><a href="Contacts.html">Contact</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="blog.html">Blog</a></li>
+    </ul>
+
+
+  <h1>My Projects</h1>
+
+  <div class="projects-container">
+    
+    <div class="project-card">
+      <img src="Lifestyle.jpg" alt="Project 1 Image">
+      <div class="project-info">
+        <a href="https://jimenezseth9.wixsite.com/www-lifestyle-com" target="_blank" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    
+    <div class="project-card">
+      <img src="canva.jpg" alt="Project 2 Image">
+      <div class="project-info">
+        <a href="https://myproject-jimenez.my.canva.site/" target="_blank" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    
+    <div class="project-card">
+      <img src="figma.jpg" alt="Project 3 Image">
+      <div class="project-info">
+        <a href="https://www.figma.com/proto/rA0kFUtoxHVUiaQuLhFdJY/Workout-Planner-Prototype?node-id=129-5&t=MzW94zOE8U9N01Yz-1" target="_blank" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="canva info.jpg" alt="Project 2 Image">
+      <div class="project-info">
+        <a href="https://www.canva.com/design/DAGwbeZ0LvA/-jBF29U3xBxZZuAPJzWt9A/view?utm_content=DAGwbeZ0LvA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4c8416a084" target="_blank" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="cozysite.jpg" alt="Project 3 Image">
+      <div class="project-info">
+        <a href="https://jimenezseth9.wixsite.com/cozysite" target="_blank" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="canva design.jpg" alt="Project 3 Image">
+      <div class="project-info">
+        <a href="https://myproject-jimenez.my.canva.site/dag4l81cgrc" target="_blank" class="project-link">View Project</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
